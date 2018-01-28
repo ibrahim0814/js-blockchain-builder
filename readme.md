@@ -2,5 +2,9 @@
 An experimental blockchain builder created in JavaScript
 
 ```
-npm i
+# Install dependencies:
+$ npm i
+
+# Run:
+$ npm start
 ```
