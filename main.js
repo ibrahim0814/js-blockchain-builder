@@ -42,7 +42,7 @@ class BlockChain {
   constructor(){
 
     this.name = readline.question("Set Blockchain name: ");
-    this.difficulty = readline.question("Set Blockchain the level of difficulty: ");
+    this.difficulty = readline.question("Set level of difficulty: ");
     this.chain = [this.createGenesisBlock()];
 
   }
