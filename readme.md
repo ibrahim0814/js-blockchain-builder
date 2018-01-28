@@ -1,5 +1,5 @@
 # Blockchain Maker  
-An experimental makeshift blockchain maker built in JavaScript
+An experimental blockchain builder created in JavaScript
 
 ```
 npm install crypto-js
