@@ -45,6 +45,9 @@ class Block {
 
         if(this.index !== 0){
           console.log('Block ' + this.index + ' mined! Hashcode: ' + this.hash);
+        }else{
+          console.log('Genesis block created!');
+
         }
 
     }
@@ -64,6 +67,7 @@ class BlockChain {
         genesis.index = 0;
         genesis.previousHash = '0';
         genesis.timestamp = new Date();
+        console.log('Mining genesis block...');
         genesis.mineBlock(this.difficulty);
         return genesis;
     }
