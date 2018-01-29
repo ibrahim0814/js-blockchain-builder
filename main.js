@@ -59,8 +59,9 @@ class BlockChain {
     createGenesisBlock() {
         let genesis = new Block('Genesis Block');
         genesis.index = 0;
-        genesis.timestamp = new Date();
         genesis.previousHash = '0';
+        genesis.timestamp = new Date();
+        genesis.mineBlock(this.difficulty);
         return genesis;
     }
 
