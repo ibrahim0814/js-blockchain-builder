@@ -1,3 +1,14 @@
+const createKeccakHash = require("keccak");
+
+// hash function
+const keccak = text =>
+  createKeccakHash("keccak256")
+    .update(text)
+    .digest("hex");
+
+// get random integer
+const randSafeInt = () => Math.floor(Math.random()*Number.MAX_SAFE_INTEGER);
+
 //class for individual blocks
 class Block {
   //note to self: required variables go first
