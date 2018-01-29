@@ -1,4 +1,4 @@
-# Blockchain Maker  
+# Blockchain Builder  
 An experimental blockchain builder created in JavaScript
 
 ```
