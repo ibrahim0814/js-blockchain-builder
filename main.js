@@ -6,8 +6,8 @@ const keccak = text =>
     createKeccakHash('keccak256')
         .update(text)
         .digest('hex');
-
 const randSafeInt = () => randomInt(Number.MAX_SAFE_INTEGER);
+const isAffirmative = text => ['y', 'yes'].includes(text.toLowerCase());
 
 //class for individual blocks
 class Block {
@@ -17,7 +17,7 @@ class Block {
         this.timestamp = new Date();
         this.data = data;
         this.previousHash = '';
-        this.nonceVal = randSafeInt();
+        this.nonceVal = 0;
         this.hash = this.calculateHash();
     }
 
@@ -29,7 +29,7 @@ class Block {
                 this.previousHash +
                 JSON.stringify(this.data) +
                 this.nonceVal
-        ).toString();
+        );
     }
 
     mineBlock(difficulty) {
@@ -43,7 +43,7 @@ class Block {
             this.hash = this.calculateHash();
         }
 
-        console.log('Block ' + this.index + ' mined! Hashcode: ' + this.hash);
+        console.log(`Block ${this.index} mined! Hashcode: ${this.hash}`);
     }
 }
 
@@ -102,28 +102,26 @@ class BlockChain {
 
 console.log('Welcome to Makeshift Blockchain Maker!');
 console.log('Creating new Blockchain...');
-let blockchain = new BlockChain();
+const blockchain = new BlockChain();
 
-let blocks = readline.question('Specify number of blocks: ');
+const blocks = readline.question('Specify number of blocks: ');
 
 for (let i = 0; i < blocks; i++) {
     console.log('Mining...');
     blockchain.addBlock({ val: i });
 }
 
-let printChain = readline.question('Do you want to print this chain? ');
-printChain = printChain.toLowerCase();
-if (printChain === 'y' || printChain === 'yes') {
-    console.log('Printing ' + blockchain.name + '...');
+const printChain = readline.question('Do you want to print this chain? ');
+if (isAffirmative(printChain)) {
+    console.log(`Printing ${blockchain.name}...`);
     console.log(JSON.stringify(blockchain, null, 3));
 } else {
     console.log('Chain not printed');
 }
 
-let valid = readline.question('Do you want to validate this chain? ');
-valid = valid.toLowerCase();
-if (valid === 'y' || valid === 'yes') {
-    console.log('Blockchain Validity: ' + blockchain.validateChain());
+const valid = readline.question('Do you want to validate this chain? ');
+if (isAffirmative(valid)) {
+    console.log(`Blockchain Validity: ${blockchain.validateChain()}`);
 } else {
     console.log('Validation not performed');
 }
