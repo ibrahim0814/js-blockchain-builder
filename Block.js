@@ -1,3 +1,13 @@
+const createKeccakHash = require("keccak");
+const randomInt = require("random-int");
+
+
+const keccak = text =>
+  createKeccakHash("keccak256")
+    .update(text)
+    .digest("hex");
+
+const randSafeInt = () => randomInt(Number.MAX_SAFE_INTEGER);
 //class for individual blocks
 class Block {
     //note to self: required variables go first
@@ -9,7 +19,7 @@ class Block {
       this.nonceVal = 0;
       this.hash = this.calculateHash();
     }
-  
+
     //get a hash code for every new block that we have
     calculateHash() {
       return keccak(
@@ -20,18 +30,18 @@ class Block {
           this.nonceVal
       );
     }
-  
+
     mineBlock(difficulty) {
       let beginningZeros = "";
       for (let i = 0; i < difficulty; i++) {
         beginningZeros += "0";
       }
-  
+
       while (this.hash.substring(0, difficulty) !== beginningZeros) {
         this.nonceVal = randSafeInt();
         this.hash = this.calculateHash();
       }
-  
+
       if (this.index !== 0) {
         console.log(`Block ${this.index} mined! Hashcode: ${this.hash}`);
       } else {
