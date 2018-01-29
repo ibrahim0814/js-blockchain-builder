@@ -10,7 +10,7 @@ const keccak = text =>
 const randSafeInt = () => randomInt(Number.MAX_SAFE_INTEGER);
 const isAffirmative = text => ["y", "yes"].includes(text.toLowerCase());
 
-console.log("Welcome to Makeshift Blockchain Maker!");
+console.log("Welcome to Blockchain Builder!");
 console.log("Creating new Blockchain...");
 let name = readline.question("Set Blockchain name: ");
 let difficulty = readline.question("Set level of difficulty: ");
