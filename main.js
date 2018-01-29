@@ -43,11 +43,8 @@ class Block {
             this.hash = this.calculateHash();
         }
 
-        if(this.index === 0){
-          console.log('Genesis block created!');
-        }else{
+        if(this.index !== 0){
           console.log('Block ' + this.index + ' mined! Hashcode: ' + this.hash);
-
         }
 
     }
