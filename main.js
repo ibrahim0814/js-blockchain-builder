@@ -1,5 +1,5 @@
 const readline = require("readline-sync");
-const BlockChain = require("./Blockchain");
+const BlockChain = require("./BlockChain");
 
 const isAffirmative = text => ["y", "yes"].includes(text.toLowerCase());
 
@@ -9,9 +9,9 @@ let name = readline.question("Set Blockchain name: ");
 let difficulty = readline.question("Set level of difficulty: ");
 const blockchain = new BlockChain(name, difficulty);
 
-const blocks = readline.question("Specify number of blocks: ");
+const numBlocks = readline.question("Specify number of blocks: ");
 
-for (let i = 0; i < blocks; i++) {
+for (let i = 0; i < numBlocks; i++) {
   console.log("Mining...");
   blockchain.addBlock({ val: i });
 }

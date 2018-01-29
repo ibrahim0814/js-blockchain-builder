@@ -7,7 +7,7 @@ const keccak = text =>
     .digest("hex");
 
 // get random integer
-const randSafeInt = () => Math.floor(Math.random()*Number.MAX_SAFE_INTEGER);
+const randSafeInt = () => Math.floor(Math.random() * Number.MAX_SAFE_INTEGER);
 
 //class for individual blocks
 class Block {
