@@ -1,16 +1,16 @@
 {
-  "name": "blockchain_maker",
+  "name": "blockchain_builder",
   "version": "1.0.0",
   "description": "An experimental blockchain builder created in JavaScript",
   "main": "main.js",
   "dependencies": {
     "keccak": "^1.4.0",
-    "random-int": "^1.0.0",
     "readline-sync": "^1.4.7"
   },
   "devDependencies": {},
   "scripts": {
     "start": "node main.js",
+    "prettify": "prettier --write *.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
