@@ -12,11 +12,10 @@ $ npm i
 
 # Run
 $ npm start
-
 ```
 ## Example run
 
-```shell
+```
 $ npm start
 
 Welcome to Blockchain Builder!
