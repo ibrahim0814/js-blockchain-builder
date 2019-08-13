@@ -31,4 +31,4 @@ if (isAffirmative(valid)) {
   console.log("Validation not performed");
 }
 
-console.log("Thanks for using Blockchain Maker!");
+console.log("Thanks for using Blockchain Builder!");
