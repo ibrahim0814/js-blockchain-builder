@@ -93,5 +93,5 @@ Do you want to validate this chain? yes
 Blockchain Validity: true
 Thanks for using Blockchain Builder!
 ```
-### Author
+## Author
 Created by Ibrahim Ali. Contact: ibrahim.ali@vanderbilt.edu
