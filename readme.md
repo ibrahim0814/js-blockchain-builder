@@ -6,7 +6,7 @@ This is a repository containing Node scripts that allow you to build your own bl
 
 ## Usage
 
-```
+```bash
 # Install dependencies
 $ npm i
 
@@ -15,7 +15,7 @@ $ npm start
 ```
 ## Example run
 
-```
+```bash
 $ npm start
 
 Welcome to Blockchain Builder!
