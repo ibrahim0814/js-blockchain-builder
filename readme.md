@@ -91,5 +91,5 @@ Printing My Blockchain...
 }
 Do you want to validate this chain? yes
 Blockchain Validity: true
-Thanks for using Blockchain Maker!
+Thanks for using Blockchain Builder!
 ```
