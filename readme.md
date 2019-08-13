@@ -15,7 +15,7 @@ $ npm start
 ```
 ## Example run
 
-```bash
+```
 $ npm start
 
 Welcome to Blockchain Builder!
