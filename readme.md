@@ -2,7 +2,7 @@
 
 ## What is this?
 
-This is a repository containing Node scripts that allow you to build your own blockchain. It's meant to be used primarily as a tool to educate yourself or others about how blockchain technology operates. Feel free to explore the code, read the comments, and learn about the insanely cool world of blockchain tech!
+This is a repository containing Node scripts that allow you to build your own blockchain from the terminal! It's meant to be used primarily as a tool to educate yourself or others about how blockchain technology operates. Feel free to explore the code, read the comments, and learn about the insanely cool world of blockchain tech!
 
 ## Usage
 
